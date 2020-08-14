@@ -57,6 +57,7 @@ public class JDFinanceGestureLockActivity extends AppCompatActivity implements O
      */
     @Override
     public void onComplete(String result) {
+
         if (TextUtils.isEmpty(result)) {
             return;
         } else if ("012345678".equals(result)) {
