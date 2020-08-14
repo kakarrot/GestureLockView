@@ -29,7 +29,7 @@ public class GestureLockPainter extends Painter {
         float originStrokeWidth = normalPaint.getStrokeWidth();
         // 2.绘制空心圆边界
         normalPaint.setStyle(Paint.Style.STROKE);
-        normalPaint.setStrokeWidth(point.radius / 32);
+        normalPaint.setStrokeWidth(point.radius / 32.0F);
         canvas.drawCircle(point.x, point.y, point.radius, normalPaint);
         // 3.结束绘制，还原画笔属性
         normalPaint.setStyle(style);
@@ -50,10 +50,10 @@ public class GestureLockPainter extends Painter {
         float originStrokeWidth = pressPaint.getStrokeWidth();
         // 2.绘制实心点
         pressPaint.setStyle(Paint.Style.FILL);
-        canvas.drawCircle(point.x, point.y, point.radius / 3, pressPaint);
+        canvas.drawCircle(point.x, point.y, point.radius / 3.0F, pressPaint);
         // 3.绘制空心圆边界
         pressPaint.setStyle(Paint.Style.STROKE);
-        pressPaint.setStrokeWidth(point.radius / 16);
+        pressPaint.setStrokeWidth(point.radius / 16.0F);
         canvas.drawCircle(point.x, point.y, point.radius, pressPaint);
         // 4.结束绘制，还原画笔属性
         pressPaint.setStyle(style);
@@ -74,10 +74,10 @@ public class GestureLockPainter extends Painter {
         float originStrokeWidth = errorPaint.getStrokeWidth();
         // 2.绘制实心点
         errorPaint.setStyle(Paint.Style.FILL);
-        canvas.drawCircle(point.x, point.y, point.radius / 3, errorPaint);
+        canvas.drawCircle(point.x, point.y, point.radius / 3.0F, errorPaint);
         // 3.绘制空心圆
         errorPaint.setStyle(Paint.Style.STROKE);
-        errorPaint.setStrokeWidth(point.radius / 16);
+        errorPaint.setStrokeWidth(point.radius / 16f);
         canvas.drawCircle(point.x, point.y, point.radius, errorPaint);
         // 4.结束绘制，还原画笔属性
         errorPaint.setStyle(style);

@@ -4,11 +4,12 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
-import android.support.annotation.ColorInt;
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.Nullable;
 
 import com.wangnan.library.model.Point;
 import com.wangnan.library.painter.Painter;
@@ -126,9 +127,6 @@ public class GestureLockThumbnailView extends View {
             for (int j = 0; j < 3; j++) { // j为"列标"
                 Point point = mPoints[i][j];
                 switch (point.status) {
-                    case Point.POINT_NORMAL_STATUS:
-                        mPaint.setColor(mNormalColor);
-                        break;
                     case Point.POINT_PRESS_STATUS:
                         mPaint.setColor(mSelectorColor);
                         break;

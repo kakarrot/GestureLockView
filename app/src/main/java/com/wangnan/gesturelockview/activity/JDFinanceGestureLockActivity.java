@@ -1,11 +1,12 @@
 package com.wangnan.gesturelockview.activity;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.wangnan.gesturelockview.R;
 import com.wangnan.library.GestureLockView;
@@ -31,7 +32,7 @@ public class JDFinanceGestureLockActivity extends AppCompatActivity implements O
         setContentView(R.layout.activity_jd_finance);
         mCurrentPassword = (TextView) findViewById(R.id.tv_current_passord);
         mGestureLockView = (GestureLockView) findViewById(R.id.glv);
-        mGestureLockView.setPainter(new JDFinancePainter());
+        mGestureLockView.setPainter(new JDFinancePainter(false));
         mGestureLockView.setGestureLockListener(this);
     }
 

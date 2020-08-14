@@ -88,13 +88,14 @@ public class AliPayPainter extends Painter {
             Point nextPoint = points.get(i + 1);
             int dx = nextPoint.x - prePoint.x;
             int dy = nextPoint.y - prePoint.y;
-            int x1 = prePoint.x + (int) (2 * radius / 3 * dx / Math.sqrt(dx * dx + dy * dy));
-            int y1 = prePoint.y + (int) (2 * radius / 3 * dy / Math.sqrt(dx * dx + dy * dy));
-            int x2 = prePoint.x + (int) (radius / 2 * dx / Math.sqrt(dx * dx + dy * dy));
-            int y2 = prePoint.y + (int) (radius / 2 * dy / Math.sqrt(dx * dx + dy * dy));
+            final double sqrt = Math.sqrt(dx * dx + dy * dy);
+            int x1 = prePoint.x + (int) (2 * radius / 3 * dx / sqrt);
+            int y1 = prePoint.y + (int) (2 * radius / 3 * dy / sqrt);
+            int x2 = prePoint.x + (int) (radius / 2 * dx / sqrt);
+            int y2 = prePoint.y + (int) (radius / 2 * dy / sqrt);
             int border = (int) Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
-            int distanceY = (int) (border * dx / Math.sqrt(dx * dx + dy * dy));
-            int distanceX = (int) (border * dy / Math.sqrt(dx * dx + dy * dy));
+            int distanceY = (int) (border * dx / sqrt);
+            int distanceX = (int) (border * dy / sqrt);
             // 2.记录三角形3个顶点坐标(第3个顶点是(x1,y1))
             int top1_x = x2 + distanceX;
             int top1_y = y2 - distanceY;

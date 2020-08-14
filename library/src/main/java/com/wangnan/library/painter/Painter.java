@@ -9,7 +9,8 @@ import android.graphics.Path;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
-import android.support.annotation.ColorInt;
+
+import androidx.annotation.ColorInt;
 
 import com.wangnan.library.GestureLockView;
 import com.wangnan.library.model.Point;
@@ -154,12 +155,12 @@ public abstract class Painter {
      */
     public final void drawGuidesLine(int viewSize, Canvas canvas) {
         canvas.drawLine(0, 0, viewSize, 0, mNormalPaint);
-        canvas.drawLine(0, viewSize / 3, viewSize, viewSize / 3, mNormalPaint);
-        canvas.drawLine(0, 2 * viewSize / 3, viewSize, 2 * viewSize / 3, mNormalPaint);
+        canvas.drawLine(0, viewSize / 3F, viewSize, viewSize / 3F, mNormalPaint);
+        canvas.drawLine(0, 2 * viewSize / 3F, viewSize, 2 * viewSize / 3F, mNormalPaint);
         canvas.drawLine(0, viewSize - 1, viewSize - 1, viewSize - 1, mNormalPaint);
         canvas.drawLine(0, 0, 0, viewSize, mNormalPaint);
-        canvas.drawLine(viewSize / 3, 0, viewSize / 3, viewSize, mNormalPaint);
-        canvas.drawLine(2 * viewSize / 3, 0, 2 * viewSize / 3, viewSize, mNormalPaint);
+        canvas.drawLine(viewSize / 3F, 0, viewSize / 3F, viewSize, mNormalPaint);
+        canvas.drawLine(2 * viewSize / 3F, 0, 2 * viewSize / 3F, viewSize, mNormalPaint);
         canvas.drawLine(viewSize - 1, 0, viewSize - 1, viewSize - 1, mNormalPaint);
     }
 

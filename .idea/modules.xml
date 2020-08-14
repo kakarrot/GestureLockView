@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GestureLockView.iml" filepath="$PROJECT_DIR$/GestureLockView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/GestureLockView-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/GestureLockView-app.iml" group="GestureLockView/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/GestureLockView-library.iml" filepath="$PROJECT_DIR$/.idea/modules/library/GestureLockView-library.iml" group="GestureLockView/library" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/owner-GestureLockView.iml" filepath="$PROJECT_DIR$/.idea/modules/owner-GestureLockView.iml" group="GestureLockView" />
     </modules>
   </component>
 </project>

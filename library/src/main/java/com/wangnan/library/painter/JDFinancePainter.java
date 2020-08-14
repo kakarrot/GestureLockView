@@ -14,6 +14,13 @@ import com.wangnan.library.model.Point;
 
 public class JDFinancePainter extends Painter {
 
+    private boolean mHasOutsideCircle = true;
+
+    public JDFinancePainter() {}
+
+    public JDFinancePainter(boolean hasOutsideCircle) {
+        mHasOutsideCircle = hasOutsideCircle;
+    }
     /**
      * 绘制正常状态的点
      *
@@ -37,8 +44,10 @@ public class JDFinancePainter extends Painter {
     @Override
     public void drawPressPoint(Point point, Canvas canvas, Paint pressPaint) {
         // 1.改变透明度绘制外层实心圆
-        pressPaint.setAlpha(32);
-        canvas.drawCircle(point.x, point.y, point.radius, pressPaint);
+        if(mHasOutsideCircle) {
+            pressPaint.setAlpha(32);
+            canvas.drawCircle(point.x, point.y, point.radius, pressPaint);
+        }
         // 2.还原透明度绘制内存实心圆
         pressPaint.setAlpha(255);
         canvas.drawCircle(point.x, point.y, point.radius / 3.0F, pressPaint);
@@ -54,8 +63,10 @@ public class JDFinancePainter extends Painter {
     @Override
     public void drawErrorPoint(Point point, Canvas canvas, Paint errorPaint) {
         // 1.改变透明度绘制外层实心圆
-        errorPaint.setAlpha(32);
-        canvas.drawCircle(point.x, point.y, point.radius, errorPaint);
+        if(mHasOutsideCircle) {
+            errorPaint.setAlpha(32);
+            canvas.drawCircle(point.x, point.y, point.radius, errorPaint);
+        }
         // 2.还原透明度绘制内存实心圆
         errorPaint.setAlpha(255);
         canvas.drawCircle(point.x, point.y, point.radius / 3.0F, errorPaint);

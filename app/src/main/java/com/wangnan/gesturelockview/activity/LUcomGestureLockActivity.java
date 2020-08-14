@@ -1,11 +1,13 @@
 package com.wangnan.gesturelockview.activity;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+
 import android.text.TextUtils;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.wangnan.gesturelockview.R;
 import com.wangnan.library.GestureLockView;
